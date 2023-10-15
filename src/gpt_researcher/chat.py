@@ -1,3 +1,4 @@
+import os
 import chainlit as cl
 from langchain.agents import load_tools
 
@@ -5,7 +6,11 @@ from .agent import LLM, create_agent
 
 @cl.on_chat_start
 def start():
-    agent = create_agent(["arxiv"])
+    if os.environ.get("TOOLS"):
+        tools = os.environ["TOOLS"].split(",")
+    else:
+        raise ValueError("You must set TOOLS as an environment variable.")
+    agent = create_agent(tools)
 
     cl.user_session.set("agent", agent)
 

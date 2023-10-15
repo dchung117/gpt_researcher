@@ -23,7 +23,7 @@ def create_agent(tools: list[str]):
         AgentExecutor:
             Agent for Q&A using GPT and provided tooling.
     """
-    tools = load_tools(tools)
+    tools = load_tools(tools, llm=LLM)
     return initialize_agent(
         tools,
         LLM,
