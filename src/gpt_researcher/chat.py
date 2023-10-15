@@ -8,9 +8,11 @@ from .agent import LLM, create_agent
 def start():
     if os.environ.get("TOOLS"):
         tools = os.environ["TOOLS"].split(",")
+        write_code = False
     else:
-        raise ValueError("You must set TOOLS as an environment variable.")
-    agent = create_agent(tools)
+        tools = []
+        write_code=True
+    agent = create_agent(tools, write_code=write_code)
 
     cl.user_session.set("agent", agent)
 
