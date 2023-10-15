@@ -21,7 +21,7 @@ feedparser==6.0.10
 filetype==1.2.0
 frozenlist==1.4.0
 googleapis-common-protos==1.61.0
--e git+https://github.com/dchung117/gpt_researcher.git@32c1fc5b2e1506231419aaeb5b613da4392f456c#egg=gpt_researcher
+-e git+https://github.com/dchung117/gpt_researcher.git@c1b0bf93e6306aa85a4855d7a32e28547ced1f63#egg=gpt_researcher
 greenlet==3.0.0
 grpcio==1.59.0
 h11==0.14.0
@@ -41,6 +41,7 @@ multidict==6.0.4
 mypy-extensions==1.0.0
 nest-asyncio==1.5.8
 nodeenv==1.8.0
+numexpr==2.8.7
 numpy==1.26.1
 openai==0.28.1
 opentelemetry-api==1.20.0
@@ -85,4 +86,5 @@ websockets==11.0.3
 wrapt==1.15.0
 wsproto==1.2.0
 yarl==1.9.2
+youtube-search==2.1.2
 zipp==3.17.0
