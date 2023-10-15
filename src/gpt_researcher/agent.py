@@ -2,11 +2,12 @@ from dotenv import load_dotenv
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import load_tools, initialize_agent, AgentType, AgentExecutor
 
-import config
+from .settings import config
 
 load_dotenv()
 
-LLM = ChatOpenAI(temperature=config.TEMPERATURE)
+LLM = ChatOpenAI(temperature=config.TEMPERATURE,
+    streaming=True)
 
 def create_agent(tools: list[str]):
     """
