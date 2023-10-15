@@ -10,6 +10,7 @@ charset-normalizer==3.3.0
 dataclasses-json==0.6.1
 feedparser==6.0.10
 frozenlist==1.4.0
+-e git+https://github.com/dchung117/gpt_researcher.git@7698c5ddd617344ea1a8c163c46bfb1a0c15ba97#egg=gpt_researcher
 greenlet==3.0.0
 idna==3.4
 jsonpatch==1.33
